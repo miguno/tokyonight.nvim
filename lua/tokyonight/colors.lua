@@ -14,7 +14,7 @@ M.default = {
   blue = "#949cb1",
   -- Neovim: Currently active/selected function or identifier in tagbar.
   -- Default: "#3d59a1"
-  blue0 = "#282828",
+  blue0 = "#504946",
   -- C: NULL, function calls, macros.
   -- Rust: Namespaces like `use base64::foo`.
   -- Default: "#7dcfff"
