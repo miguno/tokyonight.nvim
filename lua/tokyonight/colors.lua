@@ -13,6 +13,8 @@ M.default = {
   bg_highlight = "#212121",
   blue = "#949cb1",
   -- Neovim: Currently active/selected function or identifier in tagbar.
+  --         Background color (cf. `c.bg_visual` here and in theme.lua) of
+  --         visual selection.
   -- Default: "#3d59a1"
   blue0 = "#504946",
   -- C: NULL, function calls, macros.
