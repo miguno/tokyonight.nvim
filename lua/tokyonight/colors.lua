@@ -174,13 +174,13 @@ function M.setup(opts)
 
   colors.diff = {
     --add = util.darken(colors.green2, 0.15),
-    add = "#82d458",
+    add = "#242922",
     --delete = util.darken(colors.red1, 0.15),
-    delete = "#e46565",
+    delete = "#2a1919",
     --change = util.darken(colors.blue7, 0.15),
-    change = "#ffcf5b",
+    change = "#2e250d",
     --text = colors.blue7,
-    text = "#d4d4d4"
+    text = "#decca1" -- background color of modified text
   }
 
   colors.git.ignore = colors.dark3
