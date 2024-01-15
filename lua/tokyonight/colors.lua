@@ -73,7 +73,7 @@ M.default = {
   -- Rust: `fn` keyword.
   -- Neovim: Menu items in which-key.
   -- Default: "#bb9af7"
-  magenta = "#ffdd34",
+  magenta = "#ffcf5b",
   -- Neovim: Highlights of jump locations (flash.nvim).
   -- Default: "#ff007c"
   magenta2 = "#5c5542",
@@ -89,7 +89,7 @@ M.default = {
   --    Some keywords like `return`, `goto`.
   -- Rust: Some keywords like `let`, `trait`, `pub`.
   -- Default: "#9d7cd8"
-  purple = "#ffdd34",
+  purple = "#ffcf5b",
   -- Neovim: Git hashes in lazy.nvim's Log.
   -- Default: "#f7768e",
   red = "#ffcf5b", -- Also nice: "#ff6699"
