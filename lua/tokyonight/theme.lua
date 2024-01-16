@@ -119,7 +119,7 @@ function M.setup()
     PreProc = { fg = c.cyan }, -- (preferred) generic Preprocessor
     -- Include       = { }, --  preprocessor #include
     -- Define        = { }, --   preprocessor #define
-    Define = { fg = c.green1 }, --   preprocessor #define
+    Define = { fg = c.gray }, --   preprocessor #define
     -- Macro         = { }, --    same as Define
     -- PreCondit     = { }, --  preprocessor #if, #else, #endif, etc.
 
