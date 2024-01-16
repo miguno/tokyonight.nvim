@@ -82,7 +82,7 @@ M.default = {
   -- Neovim: Matches when searching.
   magenta3 = "#ff66b0",
   -- Neovim: Current match when searching.
-  magenta4 = "#ffbedd",
+  magenta4 = "#ff007c",
   -- C: Enums.
   -- Rust: Literals. (And constants?)
   -- Default: "#ff9e64"
