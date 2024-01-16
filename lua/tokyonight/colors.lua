@@ -27,7 +27,7 @@ M.default = {
   blue5 = "#d4d4d4",
   blue6 = "#b4f9f8",   -- ???
   blue7 = "#394b70",   -- ???
-  comment = "#b48b48", -- also nice: "#c38a42"
+  comment = "#a47e47", -- also nice: "#c38a42"
   -- Neovim: ">" path dividers for code structure at top (barbecue.nvim).
   -- Default: "#737aa2"
   cyan = "#d4d4d4",
