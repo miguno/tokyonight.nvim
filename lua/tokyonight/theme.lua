@@ -225,9 +225,10 @@ function M.setup()
     ["@string.escape"] = { fg = c.magenta }, -- For escape characters within a string.
 
     --- Functions
-    ["@constructor"] = { fg = c.magenta },                         -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-    ["@parameter"] = { fg = c.yellow },                            -- For parameters of a function.
-    ["@parameter.builtin"] = { fg = util.lighten(c.yellow, 0.8) }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
+    ["@constructor"] = { fg = c.magenta },       -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
+    ["@parameter"] = { fg = c.yellow1 },         -- For parameters of a function.
+    --["@parameter.builtin"] = { fg = util.lighten(c.yellow, 0.8) }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
+    ["@parameter.builtin"] = { fg = c.yellow1 }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
 
     --- Keywords
     ["@keyword"] = { fg = c.purple, style = options.styles.keywords }, -- For keywords that don't fall in previous categories.

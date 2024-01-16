@@ -103,6 +103,7 @@ M.default = {
   -- Neovim: Plugin names in lazy.nvim, e.g., "Loaded" list.
   -- Default: "#e0af68"
   yellow = "#ffcf5b",
+  yellow1 = "#ffdd34",
 }
 
 M.night = {
