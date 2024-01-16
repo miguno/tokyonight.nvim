@@ -21,7 +21,8 @@ M.default = {
   -- Rust: Namespaces like `use base64::foo`.
   -- Default: "#7dcfff"
   blue1 = "#949cb1",
-  blue2 = "#0db9d7", -- ???
+  blue2 = "#0db9d7", -- Info color
+  blue3 = "#94b0a6",
   -- Equal sign, commata.
   -- Default: "#89ddff"
   blue5 = "#d4d4d4",
