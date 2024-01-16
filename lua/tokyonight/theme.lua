@@ -281,6 +281,7 @@ function M.setup()
     ["@lsp.type.interface"] = { fg = util.lighten(c.blue1, 0.7) },
     ["@lsp.type.keyword"] = { link = "@keyword" },
     ["@lsp.type.lifetime"] = { link = "@storageclass" },
+    ["@lsp.type.macro"] = { fg = c.green2 },
     ["@lsp.type.namespace"] = { link = "@namespace" },
     ["@lsp.type.number"] = { link = "@number" },
     ["@lsp.type.operator"] = { link = "@operator" },
