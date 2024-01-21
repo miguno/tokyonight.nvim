@@ -312,6 +312,7 @@ function M.setup()
     ["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
     ["@lsp.typemod.variable.injected"] = { link = "@variable" },
     ["@lsp.typemod.variable.static"] = { link = "@constant" },
+    ["@lsp.typemod.macro.defaultLibrary.rust"] = { link = "Macro" },
     -- NOTE: maybe add these with distinct highlights?
     -- ["@lsp.typemod.variable.globalScope"] (global variables)
 
