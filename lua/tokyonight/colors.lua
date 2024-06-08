@@ -186,7 +186,10 @@ function M.setup(opts)
     --change = util.darken(colors.blue7, 0.15),
     change = "#2e250d",
     --text = colors.blue7,
-    text = "#decca1", -- background color of modified text
+    -- background color of modified text;
+    -- e.g., used by vim-fugitive in side-by-side diff view and by
+    -- neogit in side-by-side diff view (SPACE-gd)
+    text = "#644d0e",
   }
 
   colors.git.ignore = colors.dark3
