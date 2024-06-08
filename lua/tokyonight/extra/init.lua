@@ -7,7 +7,7 @@ M.extras = {
   kitty = {ext = "conf", url = "https://sw.kovidgoyal.net/kitty/conf.html", label = "Kitty"},
   fish = {ext = "fish", url = "https://fishshell.com/docs/current/index.html", label = "Fish"},
   fish_themes = {ext = "theme", url = "https://fishshell.com/docs/current/interactive.html#syntax-highlighting", label = "Fish Themes"},
-  alacritty = {ext = "yml", url = "https://github.com/alacritty/alacritty", label = "Alacritty"},
+  alacritty = {ext = "toml", url = "https://github.com/alacritty/alacritty", label = "Alacritty"},
   wezterm = {ext = "toml", url = "https://wezfurlong.org/wezterm/config/files.html", label = "WezTerm"},
   tmux = {ext = "tmux", url = "https://github.com/tmux/tmux/wiki", label = "Tmux"},
   xresources = {ext = "Xresources", url = "https://wiki.archlinux.org/title/X_resources", label = "Xresources"},
@@ -15,6 +15,7 @@ M.extras = {
   foot = {ext = "ini", url = "https://codeberg.org/dnkl/foot", label = "Foot"},
   tilix = {ext = "json", url = "https://github.com/gnunn1/tilix", label = "Tilix"},
   iterm = {ext = "itermcolors", url = "https://iterm2.com/", label = "iTerm"},
+  lazygit = {ext = "yml", url = "https://github.com/jesseduffield/lazygit", label = "Lazygit"},
   lua = {ext = "lua", url = "https://www.lua.org", label = "Lua Table for testing"},
   sublime = {ext = "tmTheme", url = "https://www.sublimetext.com/docs/themes", label = "Sublime Text"},
   delta = {ext = "gitconfig", url = "https://github.com/dandavison/delta", label = "Delta"},
@@ -25,6 +26,9 @@ M.extras = {
   dunst = {ext = "dunstrc", url = "https://dunst-project.org/", label = "Dunst"},
   gitui = {ext = "ron", url = "https://github.com/extrawurst/gitui", label = "GitUI"},
   helix = { ext = "toml", url = "https://helix-editor.com/", label = "Helix"},
+  fzf = { ext = "zsh", url = "https://github.com/junegunn/fzf", label = "Fzf"},
+  zellij = {ext = "kdl", url = "https://zellij.dev/", label = "Zellij"},
+  yazi = {ext = "toml", url = "https://github.com/sxyazi/yazi", label = "Yazi"}
 }
 
 local function write(str, fileName)

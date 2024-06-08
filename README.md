@@ -43,10 +43,12 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 - [Fish](https://fishshell.com/docs/current/index.html) ([fish](extras/fish))
 - [Fish Themes](https://fishshell.com/docs/current/interactive.html#syntax-highlighting) ([fish_themes](extras/fish_themes))
 - [Foot](https://codeberg.org/dnkl/foot) ([foot](extras/foot))
+- [Fzf](https://github.com/junegunn/fzf) ([fzf](extras/fzf))
 - [GitUI](https://github.com/extrawurst/gitui) ([gitui](extras/gitui))
 - [Helix](https://helix-editor.com/) ([helix](extras/helix))
 - [iTerm](https://iterm2.com/) ([iterm](extras/iterm))
 - [Kitty](https://sw.kovidgoyal.net/kitty/conf.html) ([kitty](extras/kitty))
+- [Lazygit](https://github.com/jesseduffield/lazygit) ([lazygit](extras/lazygit))
 - [Lua Table for testing](https://www.lua.org) ([lua](extras/lua))
 - [Prism](https://prismjs.com) ([prism](extras/prism))
 - [Sublime Text](https://www.sublimetext.com/docs/themes) ([sublime](extras/sublime))
@@ -57,13 +59,15 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 - [Windows Terminal](https://aka.ms/terminal-documentation) ([windows_terminal](extras/windows_terminal))
 - [Xfce Terminal](https://docs.xfce.org/apps/terminal/advanced) ([xfceterm](extras/xfceterm))
 - [Xresources](https://wiki.archlinux.org/title/X_resources) ([xresources](extras/xresources))
+- [Yazi](https://github.com/sxyazi/yazi) ([yazi](extras/yazi))
 - [Zathura](https://pwmt.org/projects/zathura/) ([zathura](extras/zathura))
+- [Zellij](https://zellij.dev/) ([zellij](extras/zellij))
 <!-- extras:end -->
 
 ## ⚡️ Requirements
 
 - [Neovim](https://github.com/neovim/neovim) >=
-  [0.7.2](https://github.com/neovim/neovim/releases/tag/v0.7.2)
+  [0.8.0](https://github.com/neovim/neovim/releases/tag/v0.8.0)
 
 ## 📦 Installation
 

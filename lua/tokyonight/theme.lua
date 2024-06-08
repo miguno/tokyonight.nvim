@@ -53,7 +53,9 @@ function M.setup()
     SignColumnSB = { bg = c.bg_sidebar, fg = c.fg_gutter }, -- column where |signs| are displayed
     Substitute = { bg = c.red, fg = c.black }, -- |:substitute| replacement text highlighting
     LineNr = { fg = c.fg_gutter }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    CursorLineNr = { fg = c.dark5 }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    CursorLineNr = { fg = c.orange, bold = true }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    LineNrAbove = { fg = c.fg_gutter },
+    LineNrBelow = { fg = c.fg_gutter },
     MatchParen = { fg = c.orange, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = { fg = c.fg_dark, bold = true }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgArea = { fg = c.fg_dark }, -- Area for messages and cmdline
@@ -91,6 +93,8 @@ function M.setup()
     WarningMsg = { fg = c.warning }, -- warning messages
     Whitespace = { fg = c.fg_gutter }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
     WildMenu = { bg = c.bg_visual }, -- current match in 'wildmenu' completion
+    WinBar = { link = "StatusLine" }, -- window bar
+    WinBarNC = { link = "StatusLineNC" }, -- window bar in inactive windows
 
     -- These groups are not listed as default vim groups,
     -- but they are defacto standard group names for syntax highlighting.
@@ -130,13 +134,13 @@ function M.setup()
     Special = { fg = c.blue1 }, -- (preferred) any special symbol
     -- SpecialChar   = { }, --  special character in a constant
     -- Tag           = { }, --    you can use CTRL-] on this
-    -- Delimiter     = { }, --  character that needs attention
+    Delimiter = { link = "Special" }, --  character that needs attention
     -- SpecialComment= { }, -- special things inside a comment
     Debug = { fg = c.orange }, --    debugging statements
 
     Underlined = { underline = true }, -- (preferred) text that stands out, HTML links
-    Bold = { bold = true },
-    Italic = { italic = true },
+    Bold = { bold = true, fg = c.fg }, -- (preferred) any bold text
+    Italic = { italic = true, fg = c.fg }, -- (preferred) any italic text
 
     -- ("Ignore", below, may be invisible...)
     -- Ignore = { }, -- (preferred) left blank, hidden  |hl-Ignore|
@@ -206,7 +210,64 @@ function M.setup()
     DapStoppedLine = { bg = util.darken(c.warning, 0.1) }, -- Used for "Warning" diagnostic virtual text
 
     -- These groups are for the Neovim tree-sitter highlights.
-    -- As of writing, tree-sitter support is a WIP, group names may change.
+    ["@annotation"] = { link = "PreProc" },
+    ["@attribute"] = { link = "PreProc" },
+    ["@boolean"] = { link = "Boolean" },
+    ["@character"] = { link = "Character" },
+    ["@character.special"] = { link = "SpecialChar" },
+    ["@character.printf"] = { link = "SpecialChar" },
+    ["@comment"] = { link = "Comment" },
+    ["@keyword.conditional"] = { link = "Conditional" },
+    ["@constant"] = { link = "Constant" },
+    ["@constant.builtin"] = { link = "Special" },
+    ["@constant.macro"] = { link = "Define" },
+    ["@keyword.debug"] = { link = "Debug" },
+    ["@keyword.directive.define"] = { link = "Define" },
+    ["@keyword.exception"] = { link = "Exception" },
+    ["@number.float"] = { link = "Float" },
+    ["@function"] = { link = "Function" },
+    ["@function.builtin"] = { link = "Special" },
+    ["@function.call"] = { link = "@function" },
+    ["@function.macro"] = { link = "Macro" },
+    ["@keyword.import"] = { link = "Include" },
+    ["@keyword.coroutine"] = { link = "@keyword" },
+    ["@keyword.operator"] = { link = "@operator" },
+    ["@keyword.return"] = { link = "@keyword" },
+    ["@function.method"] = { link = "Function" },
+    ["@function.method.call"] = { link = "@function.method" },
+    ["@namespace.builtin"] = { link = "@variable.builtin" },
+    ["@none"] = {},
+    ["@number"] = { link = "Number" },
+    ["@keyword.directive"] = { link = "PreProc" },
+    ["@keyword.repeat"] = { link = "Repeat" },
+    ["@keyword.storage"] = { link = "StorageClass" },
+    ["@string"] = { link = "String" },
+    ["@markup.link.label"] = { link = "SpecialChar" },
+    ["@markup.link.label.symbol"] = { link = "Identifier" },
+    ["@tag"] = { link = "Label" },
+    ["@tag.attribute"] = { link = "@property" },
+    ["@tag.delimiter"] = { link = "Delimiter" },
+    ["@markup"] = { link = "@none" },
+    ["@markup.environment"] = { link = "Macro" },
+    ["@markup.environment.name"] = { link = "Type" },
+    ["@markup.raw"] = { link = "String" },
+    ["@markup.math"] = { link = "Special" },
+    ["@markup.strong"] = { bold = true },
+    ["@markup.emphasis"] = { italic = true },
+    ["@markup.italic"] = { italic = true },
+    ["@markup.strikethrough"] = { strikethrough = true },
+    ["@markup.underline"] = { underline = true },
+    ["@markup.heading"] = { link = "Title" },
+    ["@comment.note"] = { fg = c.hint },
+    ["@comment.error"] = { fg = c.error },
+    ["@comment.hint"] = { fg = c.hint },
+    ["@comment.info"] = { fg = c.info },
+    ["@comment.warning"] = { fg = c.warning },
+    ["@comment.todo"] = { fg = c.todo },
+    ["@markup.link.url"] = { link = "Underlined" },
+    ["@type"] = { link = "Type" },
+    ["@type.definition"] = { link = "Typedef" },
+    ["@type.qualifier"] = { link = "@keyword" },
 
     --- Misc
     -- TODO:
@@ -216,24 +277,23 @@ function M.setup()
     --- Punctuation
     ["@punctuation.delimiter"] = { fg = c.blue5 }, -- For delimiters ie: `.`
     ["@punctuation.bracket"] = { fg = c.fg_dark }, -- For brackets and parens.
-    ["@punctuation.special"] = { fg = c.blue5 }, -- For special punctutation that does not fall in the catagories before.
-    ["@punctuation.special.markdown"] = { fg = c.orange, bold = true },
+    ["@punctuation.special"] = { fg = c.blue5 }, -- For special symbols (e.g. `{}` in string interpolation)
+    ["@markup.list"] = { fg = c.blue5 }, -- For special punctutation that does not fall in the catagories before.
+    ["@markup.list.markdown"] = { fg = c.orange, bold = true },
 
     --- Literals
     ["@string.documentation"] = { fg = c.yellow },
-    ["@string.regex"] = { fg = c.blue6 }, -- For regexes.
+    ["@string.regexp"] = { fg = c.blue6 }, -- For regexes.
     ["@string.escape"] = { fg = c.magenta }, -- For escape characters within a string.
 
     --- Functions
     ["@constructor"] = { fg = c.magenta }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-    ["@parameter"] = { fg = c.yellow1 }, -- For parameters of a function.
-    --["@parameter.builtin"] = { fg = util.lighten(c.yellow, 0.8) }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
-    ["@parameter.builtin"] = { fg = c.yellow1 }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
+    ["@variable.parameter"] = { fg = c.yellow1 }, -- For parameters of a function.
+    ["@variable.parameter.builtin"] = { fg = util.lighten(c.yellow, 0.8) }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
+    ["@variable.parameter.builtin"] = { fg = c.yellow1 }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
 
     --- Keywords
     ["@keyword"] = { fg = c.purple, style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
-    -- TODO:
-    -- ["@keyword.coroutine"] = { }, -- For keywords related to coroutines.
     ["@keyword.function"] = { fg = c.magenta, style = options.styles.functions }, -- For keywords used to define a fuction.
 
     ["@label"] = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
@@ -241,28 +301,27 @@ function M.setup()
     --- Types
     --["@type.builtin"] = { fg = util.darken(c.blue1, 0.8) },
     ["@type.builtin"] = { fg = c.blue3 },
-    ["@field"] = { fg = c.green1 }, -- For fields.
+    ["@variable.member"] = { fg = c.green1 }, -- For fields.
     ["@property"] = { fg = c.green1 },
 
     --- Identifiers
     ["@variable"] = { fg = c.fg, style = options.styles.variables }, -- Any variable name that does not have another highlight.
     ["@variable.builtin"] = { fg = c.red }, -- Variable names that are defined by the languages, like `this` or `self`.
-    ["@namespace.builtin"] = { fg = c.red }, -- Variable names that are defined by the languages, like `this` or `self`.
+    ["@module.builtin"] = { fg = c.red }, -- Variable names that are defined by the languages, like `this` or `self`.
 
     --- Text
-    -- ["@text.literal.markdown"] = { fg = c.blue },
-    ["@text.literal.markdown_inline"] = { bg = c.terminal_black, fg = c.blue },
-    ["@text.reference"] = { fg = c.teal },
+    -- ["@markup.raw.markdown"] = { fg = c.blue },
+    ["@markup.raw.markdown_inline"] = { bg = c.terminal_black, fg = c.blue },
+    ["@markup.link"] = { fg = c.teal },
 
-    ["@text.todo.unchecked"] = { fg = c.blue }, -- For brackets and parens.
-    ["@text.todo.checked"] = { fg = c.green1 }, -- For brackets and parens.
-    ["@text.warning"] = { fg = c.bg, bg = c.warning },
-    ["@text.danger"] = { fg = c.bg, bg = c.error },
+    ["@markup.list.unchecked"] = { fg = c.blue }, -- For brackets and parens.
+    ["@markup.list.checked"] = { fg = c.green1 }, -- For brackets and parens.
 
-    ["@text.diff.add"] = { link = "DiffAdd" },
-    ["@text.diff.delete"] = { link = "DiffDelete" },
+    ["@diff.plus"] = { link = "DiffAdd" },
+    ["@diff.minus"] = { link = "DiffDelete" },
+    ["@diff.delta"] = { link = "DiffChange" },
 
-    ["@namespace"] = { link = "Include" },
+    ["@module"] = { link = "Include" },
 
     -- tsx
     ["@tag.tsx"] = { fg = c.red },
@@ -278,16 +337,16 @@ function M.setup()
     ["@lsp.type.enum"] = { link = "@type" },
     ["@lsp.type.enumMember"] = { link = "@constant" },
     ["@lsp.type.escapeSequence"] = { link = "@string.escape" },
-    ["@lsp.type.formatSpecifier"] = { link = "@punctuation.special" },
+    ["@lsp.type.formatSpecifier"] = { link = "@markup.list" },
     ["@lsp.type.generic"] = { link = "@variable" },
     ["@lsp.type.interface"] = { fg = util.lighten(c.blue1, 0.7) },
     ["@lsp.type.keyword"] = { link = "@keyword" },
-    ["@lsp.type.lifetime"] = { link = "@storageclass" },
+    ["@lsp.type.lifetime"] = { link = "@keyword.storage" },
     ["@lsp.type.macro"] = { fg = c.green2 },
-    ["@lsp.type.namespace"] = { link = "@namespace" },
+    ["@lsp.type.namespace"] = { link = "@module" },
     ["@lsp.type.number"] = { link = "@number" },
     ["@lsp.type.operator"] = { link = "@operator" },
-    ["@lsp.type.parameter"] = { link = "@parameter" },
+    ["@lsp.type.parameter"] = { link = "@variable.parameter" },
     ["@lsp.type.property"] = { link = "@property" },
     ["@lsp.type.selfKeyword"] = { link = "@variable.builtin" },
     ["@lsp.type.selfTypeKeyword"] = { link = "@variable.builtin" },
@@ -315,6 +374,9 @@ function M.setup()
     ["@lsp.typemod.macro.defaultLibrary.rust"] = { link = "Macro" },
     -- NOTE: maybe add these with distinct highlights?
     -- ["@lsp.typemod.variable.globalScope"] (global variables)
+
+    -- Python
+    ["@lsp.type.namespace.python"] = { link = "@variable" },
 
     -- ts-rainbow
     rainbowcol1 = { fg = c.red },
@@ -346,7 +408,7 @@ function M.setup()
     -- LspTrouble
     TroubleText = { fg = c.fg_dark },
     TroubleCount = { fg = c.magenta, bg = c.fg_gutter },
-    TroubleNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
+    TroubleNormal = { fg = c.fg, bg = c.bg_sidebar },
 
     -- Illuminate
     illuminatedWord = { bg = c.fg_gutter },
@@ -411,9 +473,17 @@ function M.setup()
     GitSignsChange = { fg = c.gitSigns.change }, -- diff mode: Changed line |diff.txt|
     GitSignsDelete = { fg = c.gitSigns.delete }, -- diff mode: Deleted line |diff.txt|
 
+    -- mini.diff
+    MiniDiffSignAdd = { fg = c.gitSigns.add }, -- diff mode: Added line |diff.txt|
+    MiniDiffSignChange = { fg = c.gitSigns.change }, -- diff mode: Changed line |diff.txt|
+    MiniDiffSignDelete = { fg = c.gitSigns.delete }, -- diff mode: Deleted line |diff.txt|
+
     -- Telescope
     TelescopeBorder = { fg = c.border_highlight, bg = c.bg_float },
     TelescopeNormal = { fg = c.fg, bg = c.bg_float },
+    TelescopePromptBorder = { fg = c.orange, bg = c.bg_float },
+    TelescopePromptTitle = { fg = c.orange, bg = c.bg_float },
+    TelescopeResultsComment = { fg = c.dark3 },
 
     -- NvimTree
     NvimTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
@@ -437,6 +507,10 @@ function M.setup()
     NeoTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
     NeoTreeNormalNC = { fg = c.fg_sidebar, bg = c.bg_sidebar },
     NeoTreeDimText = { fg = c.fg_gutter },
+    NeoTreeGitModified = { fg = c.orange },
+    NeoTreeGitUntracked = { fg = c.magenta },
+    NeoTreeGitStaged = { fg = c.green1 },
+    NeoTreeFileName = { fg = c.fg_sidebar },
 
     -- Fern
     FernBranchText = { fg = c.blue },
@@ -614,9 +688,22 @@ function M.setup()
     AerialLine = { link = "LspInlayHint" },
 
     IndentBlanklineChar = { fg = c.fg_gutter, nocombine = true },
-    IndentBlanklineContextChar = { fg = c.purple, nocombine = true },
+    IndentBlanklineContextChar = { fg = c.blue1, nocombine = true },
     IblIndent = { fg = c.fg_gutter, nocombine = true },
-    IblScope = { fg = c.purple, nocombine = true },
+    IblScope = { fg = c.blue1, nocombine = true },
+    IndentLine = { fg = c.fg_gutter, nocombine = true },
+    IndentLineCurrent = { fg = c.blue1, nocombine = true },
+
+    OctoDirty = { fg = c.orange, bold = true },
+    OctoStatusColumn = { fg = c.blue1 },
+    OctoDetailsLabel = { fg = c.blue1, bold = true },
+    OctoDetailsValue = { link = "@variable.member" },
+    OctoIssueTitle = { fg = c.purple, bold = true },
+    OctoStateOpen = { link = "DiagnosticVirtualTextHint" },
+    OctoStateClosed = { link = "DiagnosticVirtualTextError" },
+    OctoStatePending = { link = "DiagnosticVirtualTextWarn" },
+    OctoStateChangesRequested = { link = "DiagnosticVirtualTextWarn" },
+    OctoStateMerged = { bg = util.darken(c.magenta, 0.1), fg = c.magenta },
 
     -- Scrollbar
     ScrollbarHandle = { fg = c.none, bg = c.bg_highlight },
@@ -745,28 +832,28 @@ function M.setup()
     Enum = "@lsp.type.enum",
     EnumMember = "@lsp.type.enumMember",
     Event = "Special",
-    Field = "@field",
+    Field = "@variable.member",
     File = "Normal",
     Folder = "Directory",
     Function = "@function",
     Interface = "@lsp.type.interface",
-    Key = "@field",
+    Key = "@variable.member",
     Keyword = "@lsp.type.keyword",
-    Method = "@method",
-    Module = "@namespace",
-    Namespace = "@namespace",
+    Method = "@function.method",
+    Module = "@module",
+    Namespace = "@module",
     Null = "@constant.builtin",
     Number = "@number",
     Object = "@constant",
     Operator = "@operator",
-    Package = "@namespace",
+    Package = "@module",
     Property = "@property",
-    Reference = "@text.reference",
+    Reference = "@markup.link",
     Snippet = "Conceal",
     String = "@string",
     Struct = "@lsp.type.struct",
     Unit = "@lsp.type.struct",
-    Text = "@text",
+    Text = "@markup",
     TypeParameter = "@lsp.type.typeParameter",
     Variable = "@variable",
     Value = "@string",
@@ -784,7 +871,7 @@ function M.setup()
   local markdown_rainbow = { c.blue, c.yellow, c.green, c.teal, c.magenta, c.purple }
 
   for i, color in ipairs(markdown_rainbow) do
-    theme.highlights["@text.title." .. i .. ".markdown"] = { fg = color, bold = true }
+    theme.highlights["@markup.heading." .. i .. ".markdown"] = { fg = color, bold = true }
     theme.highlights["Headline" .. i] = { bg = util.darken(color, 0.05) }
   end
   theme.highlights["Headline"] = { link = "Headline1" }
