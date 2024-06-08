@@ -8,7 +8,7 @@ local M = {}
 ---@class Palette
 M.default = {
   none = "NONE",
-  bg = "#181818",      -- When changing, also update M.night settings below.
+  bg = "#181818", -- When changing, also update M.night settings below.
   bg_dark = "#151515", -- When changing, also update M.night settings below.
   bg_highlight = "#212121",
   blue = "#949cb1",
@@ -26,8 +26,8 @@ M.default = {
   -- Equal sign, commata.
   -- Default: "#89ddff"
   blue5 = "#d4d4d4",
-  blue6 = "#b4f9f8",   -- ???
-  blue7 = "#394b70",   -- ???
+  blue6 = "#b4f9f8", -- ???
+  blue7 = "#394b70", -- ???
   comment = "#a47e47", -- also nice: "#c38a42"
   -- Neovim: ">" path dividers for code structure at top (barbecue.nvim).
   -- Default: "#737aa2"
@@ -115,35 +115,35 @@ M.day = M.night
 M.moon = function()
   local ret = {
     none = "NONE",
-    bg_dark = "#1e2030",        --
-    bg = "#222436",             --
-    bg_highlight = "#2f334d",   --
+    bg_dark = "#1e2030", --
+    bg = "#222436", --
+    bg_highlight = "#2f334d", --
     terminal_black = "#444a73", --
-    fg = "#c8d3f5",             --
-    fg_dark = "#828bb8",        --
+    fg = "#c8d3f5", --
+    fg_dark = "#828bb8", --
     fg_gutter = "#3b4261",
     dark3 = "#545c7e",
     comment = "#7a88cf", --
     dark5 = "#737aa2",
-    blue0 = "#3e68d7",   --
-    blue = "#82aaff",    --
-    cyan = "#86e1fc",    --
-    blue1 = "#65bcff",   --
+    blue0 = "#3e68d7", --
+    blue = "#82aaff", --
+    cyan = "#86e1fc", --
+    blue1 = "#65bcff", --
     blue2 = "#0db9d7",
     blue5 = "#89ddff",
-    blue6 = "#b4f9f8",   --
+    blue6 = "#b4f9f8", --
     blue7 = "#394b70",
-    purple = "#fca7ea",  --
+    purple = "#fca7ea", --
     magenta2 = "#ff007c",
     magenta = "#c099ff", --
-    orange = "#ff966c",  --
-    yellow = "#ffc777",  --
-    green = "#c3e88d",   --
-    green1 = "#4fd6be",  --
+    orange = "#ff966c", --
+    yellow = "#ffc777", --
+    green = "#c3e88d", --
+    green1 = "#4fd6be", --
     green2 = "#41a6b5",
-    teal = "#4fd6be",    --
-    red = "#ff757f",     --
-    red1 = "#c53b53",    --
+    teal = "#4fd6be", --
+    red = "#ff757f", --
+    red1 = "#c53b53", --
   }
   ret.comment = util.blend(ret.comment, ret.bg, "bb")
   ret.git = {
@@ -185,7 +185,7 @@ function M.setup(opts)
     --change = util.darken(colors.blue7, 0.15),
     change = "#2e250d",
     --text = colors.blue7,
-    text = "#decca1" -- background color of modified text
+    text = "#decca1", -- background color of modified text
   }
 
   colors.git.ignore = colors.dark3
@@ -199,12 +199,12 @@ function M.setup(opts)
 
   -- Sidebar and Floats are configurable
   colors.bg_sidebar = config.options.styles.sidebars == "transparent" and colors.none
-      or config.options.styles.sidebars == "dark" and colors.bg_dark
-      or colors.bg
+    or config.options.styles.sidebars == "dark" and colors.bg_dark
+    or colors.bg
 
   colors.bg_float = config.options.styles.floats == "transparent" and colors.none
-      or config.options.styles.floats == "dark" and colors.bg_dark
-      or colors.bg
+    or config.options.styles.floats == "dark" and colors.bg_dark
+    or colors.bg
 
   colors.bg_visual = util.darken(colors.blue0, 0.4)
   colors.bg_search = colors.magenta3
