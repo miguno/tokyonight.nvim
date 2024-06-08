@@ -393,6 +393,11 @@ function M.setup()
     NeotestTarget = { fg = c.blue },
     --[[ NeotestUnknown = {}, ]]
 
+    -- Oil (oil.nvim)
+    OilDir = { fg = c.blue4, bold = true },
+    OilLink = { fg = c.magenta },
+    OilLinkTarget = { fg = c.magenta },
+
     -- GitGutter
     GitGutterAdd = { fg = c.gitSigns.add }, -- diff mode: Added line |diff.txt|
     GitGutterChange = { fg = c.gitSigns.change }, -- diff mode: Changed line |diff.txt|

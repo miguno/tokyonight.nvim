@@ -23,6 +23,7 @@ M.default = {
   blue1 = "#949cb1",
   blue2 = "#0db9d7", -- Info color
   blue3 = "#94b0a6",
+  blue4 = "#7aa2f7", -- Also used in my wezterm color scheme.
   -- Equal sign, commata.
   -- Default: "#89ddff"
   blue5 = "#d4d4d4",
