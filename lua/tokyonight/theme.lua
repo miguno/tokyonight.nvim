@@ -301,7 +301,7 @@ function M.setup()
     --- Types
     --["@type.builtin"] = { fg = util.darken(c.blue1, 0.8) },
     ["@type.builtin"] = { fg = c.blue3 },
-    ["@variable.member"] = { fg = c.green1 }, -- For fields.
+    ["@variable.member"] = { fg = c.blue3 }, -- For fields.
     ["@property"] = { fg = c.green1 },
 
     --- Identifiers
