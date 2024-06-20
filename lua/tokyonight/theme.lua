@@ -278,7 +278,7 @@ function M.setup()
     ["@punctuation.delimiter"] = { fg = c.blue5 }, -- For delimiters ie: `.`
     ["@punctuation.bracket"] = { fg = c.fg_dark }, -- For brackets and parens.
     ["@punctuation.special"] = { fg = c.blue5 }, -- For special symbols (e.g. `{}` in string interpolation)
-    ["@markup.list"] = { fg = c.blue5 }, -- For special punctutation that does not fall in the catagories before.
+    ["@markup.list"] = { fg = c.blue5 }, -- For special punctutation that does not fall in the categories before.
     ["@markup.list.markdown"] = { fg = c.orange, bold = true },
 
     --- Literals
@@ -294,7 +294,7 @@ function M.setup()
 
     --- Keywords
     ["@keyword"] = { fg = c.purple, style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
-    ["@keyword.function"] = { fg = c.magenta, style = options.styles.functions }, -- For keywords used to define a fuction.
+    ["@keyword.function"] = { fg = c.magenta, style = options.styles.functions }, -- For keywords used to define a function.
 
     ["@label"] = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
 
@@ -484,6 +484,22 @@ function M.setup()
     TelescopePromptBorder = { fg = c.orange, bg = c.bg_float },
     TelescopePromptTitle = { fg = c.orange, bg = c.bg_float },
     TelescopeResultsComment = { fg = c.dark3 },
+
+    -- FzfLua
+    FzfLuaBorder = { fg = c.border_highlight, bg = c.bg_float },
+    FzfLuaNormal = { fg = c.fg, bg = c.bg_float },
+    FzfLuaFzfNormal = { fg = c.fg },
+    FzfLuaTitle = { fg = c.orange, bg = c.bg_float },
+    FzfLuaPreviewTitle = { fg = c.border_highlight, bg = c.bg_float },
+    FzfLuaFilePart = { link = "FzfLuaFzfNormal" },
+    FzfLuaDirPart = { fg = c.dark3 },
+    FzfLuaCursor = { link = "IncSearch" },
+    FzfLuaHeaderBind = { link = "@punctuation.special" },
+    FzfLuaHeaderText = { link = "Title" },
+    FzfLuaPath = { link = "Directory" },
+    FzfLuaFzfPointer = { fg = c.magenta2 },
+    FzfLuaFzfCursorLine = { link = "Visual" },
+    FzfLuaFzfSeparator = { fg = c.orange, bg = c.bg_float },
 
     -- NvimTree
     NvimTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
@@ -815,6 +831,12 @@ function M.setup()
     -- Noice
 
     NoiceCompletionItemKindDefault = { fg = c.fg_dark, bg = c.none },
+    NoiceCmdlineIconLua = { fg = c.blue1 },
+    NoiceCmdlinePopupBorderLua = { fg = c.blue1 },
+    NoiceCmdlinePopupTitleLua = { fg = c.blue1 },
+    NoiceCmdlineIconInput = { fg = c.yellow },
+    NoiceCmdlinePopupBorderInput = { fg = c.yellow },
+    NoiceCmdlinePopupTitleInput = { fg = c.yellow },
 
     TreesitterContext = { bg = util.darken(c.fg_gutter, 0.8) },
     Hlargs = { fg = c.yellow },

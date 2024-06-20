@@ -1131,6 +1131,53 @@ local highlights = {
     fg = "#82aaff",
     style = {}
   },
+  FzfLuaBorder = {
+    bg = "#1e2030",
+    fg = "#589ed7"
+  },
+  FzfLuaCursor = {
+    link = "IncSearch"
+  },
+  FzfLuaDirPart = {
+    fg = "#545c7e"
+  },
+  FzfLuaFilePart = {
+    link = "FzfLuaFzfNormal"
+  },
+  FzfLuaFzfCursorLine = {
+    link = "Visual"
+  },
+  FzfLuaFzfNormal = {
+    fg = "#c8d3f5"
+  },
+  FzfLuaFzfPointer = {
+    fg = "#ff007c"
+  },
+  FzfLuaFzfSeparator = {
+    bg = "#1e2030",
+    fg = "#ff966c"
+  },
+  FzfLuaHeaderBind = {
+    link = "@punctuation.special"
+  },
+  FzfLuaHeaderText = {
+    link = "Title"
+  },
+  FzfLuaNormal = {
+    bg = "#1e2030",
+    fg = "#c8d3f5"
+  },
+  FzfLuaPath = {
+    link = "Directory"
+  },
+  FzfLuaPreviewTitle = {
+    bg = "#1e2030",
+    fg = "#589ed7"
+  },
+  FzfLuaTitle = {
+    bg = "#1e2030",
+    fg = "#ff966c"
+  },
   GitGutterAdd = {
     fg = "#627259"
   },
@@ -1885,6 +1932,24 @@ local highlights = {
   },
   NeotestWinSelect = {
     fg = "#82aaff"
+  },
+  NoiceCmdlineIconInput = {
+    fg = "#ffc777"
+  },
+  NoiceCmdlineIconLua = {
+    fg = "#65bcff"
+  },
+  NoiceCmdlinePopupBorderInput = {
+    fg = "#ffc777"
+  },
+  NoiceCmdlinePopupBorderLua = {
+    fg = "#65bcff"
+  },
+  NoiceCmdlinePopupTitleInput = {
+    fg = "#ffc777"
+  },
+  NoiceCmdlinePopupTitleLua = {
+    fg = "#65bcff"
   },
   NoiceCompletionItemKindArray = {
     link = "LspKindArray"
