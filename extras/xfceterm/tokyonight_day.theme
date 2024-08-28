@@ -1,9 +1,9 @@
 [Scheme]
 Name=TokyoNight Colors
-ColorBackground=#e1e2e7
-ColorForeground=#3760bf
+ColorBackground=#e7e7e7
+ColorForeground=#606060
 
-ColorSelectionBackground=#b6bfe2
-ColorSelection=#3760bf
+ColorSelectionBackground=#d1cbc4
+ColorSelection=#606060
 
-ColorPalette=#e9e9ed;#f52a65;#587539;#8c6c3e;#2e7de9;#9854f1;#007197;#6172b0;#a1a6c5;#f52a65;#587539;#8c6c3e;#2e7de9;#9854f1;#007197;#3760bf
+ColorPalette=#eeeeee;#765b00;#53852f;#765b00;#7a839b;#765b00;#606060;#888888;#a1a6c5;#765b00;#53852f;#765b00;#7a839b;#765b00;#606060;#606060

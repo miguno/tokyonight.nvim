@@ -4,17 +4,17 @@
 
 themes {
     tokyonight_day {
-        fg "#3760bf"
-        bg "#c4c8da"
-        black "#e9e9ed"
-        red "#f52a65"
-        green "#587539"
-        yellow "#8c6c3e"
-        blue "#2e7de9"
-        magenta "#9854f1"
-        cyan "#007197"
-        white "#6172b0"
-        orange "#b15c00"
+        fg "#606060"
+        bg "#dbdbdb"
+        black "#eeeeee"
+        red "#765b00"
+        green "#53852f"
+        yellow "#765b00"
+        blue "#7a839b"
+        magenta "#765b00"
+        cyan "#606060"
+        white "#888888"
+        orange "#606060"
     }
 }
 

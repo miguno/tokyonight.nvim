@@ -5,7 +5,7 @@ local colors = {
   bg_float = "#1e2030",
   bg_highlight = "#2f334d",
   bg_popup = "#1e2030",
-  bg_search = "#3e68d7",
+  bg_search = "#ff66b0",
   bg_sidebar = "#1e2030",
   bg_statusline = "#1e2030",
   bg_visual = "#2d3f76",
@@ -14,6 +14,8 @@ local colors = {
   blue0 = "#3e68d7",
   blue1 = "#65bcff",
   blue2 = "#0db9d7",
+  blue3 = "#94b0a6",
+  blue4 = "#7aa2f7",
   blue5 = "#89ddff",
   blue6 = "#b4f9f8",
   blue7 = "#394b70",
@@ -28,10 +30,10 @@ local colors = {
     delete = "#6b2e43"
   },
   diff = {
-    add = "#273849",
-    change = "#252a3f",
-    delete = "#3a273a",
-    text = "#394b70"
+    add = "#242922",
+    change = "#2e250d",
+    delete = "#2a1919",
+    text = "#644d0e"
   },
   error = "#c53b53",
   fg = "#c8d3f5",
@@ -50,6 +52,7 @@ local colors = {
     change = "#485a86",
     delete = "#b55a67"
   },
+  gray = "#e5e5e5",
   green = "#c3e88d",
   green1 = "#4fd6be",
   green2 = "#41a6b5",
@@ -57,6 +60,8 @@ local colors = {
   info = "#0db9d7",
   magenta = "#c099ff",
   magenta2 = "#ff007c",
+  magenta3 = "#ff66b0",
+  magenta4 = "#ff007c",
   none = "NONE",
   orange = "#ff966c",
   purple = "#fca7ea",
@@ -66,7 +71,8 @@ local colors = {
   terminal_black = "#444a73",
   todo = "#82aaff",
   warning = "#ffc777",
-  yellow = "#ffc777"
+  yellow = "#ffc777",
+  yellow1 = "#ffdd34"
 }
 
 local highlights = {
@@ -236,6 +242,9 @@ local highlights = {
   ["@lsp.type.lifetime"] = {
     link = "@keyword.storage"
   },
+  ["@lsp.type.macro"] = {
+    fg = "#41a6b5"
+  },
   ["@lsp.type.namespace"] = {
     link = "@module"
   },
@@ -292,6 +301,9 @@ local highlights = {
   ["@lsp.typemod.macro.defaultLibrary"] = {
     link = "@function.builtin"
   },
+  ["@lsp.typemod.macro.defaultLibrary.rust"] = {
+    link = "Macro"
+  },
   ["@lsp.typemod.method.defaultLibrary"] = {
     link = "@function.builtin"
   },
@@ -305,10 +317,10 @@ local highlights = {
     link = "@type.builtin"
   },
   ["@lsp.typemod.type.defaultLibrary"] = {
-    fg = "#589ed7"
+    fg = "#94b0a6"
   },
   ["@lsp.typemod.typeAlias.defaultLibrary"] = {
-    fg = "#589ed7"
+    fg = "#94b0a6"
   },
   ["@lsp.typemod.variable.callable"] = {
     link = "@function"
@@ -470,7 +482,7 @@ local highlights = {
     link = "Type"
   },
   ["@type.builtin"] = {
-    fg = "#589ed7"
+    fg = "#94b0a6"
   },
   ["@type.definition"] = {
     link = "Typedef"
@@ -486,13 +498,13 @@ local highlights = {
     fg = "#ff757f"
   },
   ["@variable.member"] = {
-    fg = "#4fd6be"
+    fg = "#94b0a6"
   },
   ["@variable.parameter"] = {
-    fg = "#ffc777"
+    fg = "#ffdd34"
   },
   ["@variable.parameter.builtin"] = {
-    fg = "#ffd292"
+    fg = "#ffdd34"
   },
   ALEErrorSign = {
     fg = "#c53b53"
@@ -1010,6 +1022,9 @@ local highlights = {
   Debug = {
     fg = "#ff966c"
   },
+  Define = {
+    fg = "#e5e5e5"
+  },
   DefinitionCount = {
     fg = "#fca7ea"
   },
@@ -1073,16 +1088,16 @@ local highlights = {
     link = "DiagnosticWarn"
   },
   DiffAdd = {
-    bg = "#273849"
+    bg = "#242922"
   },
   DiffChange = {
-    bg = "#252a3f"
+    bg = "#2e250d"
   },
   DiffDelete = {
-    bg = "#3a273a"
+    bg = "#2a1919"
   },
   DiffText = {
-    bg = "#394b70"
+    bg = "#644d0e"
   },
   Directory = {
     fg = "#82aaff"
@@ -1286,7 +1301,7 @@ local highlights = {
     bg = "#3b4261"
   },
   IncSearch = {
-    bg = "#ff966c",
+    bg = "#ff007c",
     fg = "#1b1d2b"
   },
   IndentBlanklineChar = {
@@ -1549,6 +1564,9 @@ local highlights = {
   LspSignatureActiveParameter = {
     bg = "#262f50",
     bold = true
+  },
+  Macro = {
+    fg = "#41a6b5"
   },
   MatchParen = {
     bold = true,
@@ -1862,7 +1880,7 @@ local highlights = {
     fg = "#c099ff"
   },
   NeogitDiffAddHighlight = {
-    bg = "#273849",
+    bg = "#242922",
     fg = "#b8db87"
   },
   NeogitDiffContextHighlight = {
@@ -1870,7 +1888,7 @@ local highlights = {
     fg = "#828bb8"
   },
   NeogitDiffDeleteHighlight = {
-    bg = "#3a273a",
+    bg = "#2a1919",
     fg = "#e26a75"
   },
   NeogitHunkHeader = {
@@ -2229,6 +2247,16 @@ local highlights = {
   OctoStatusColumn = {
     fg = "#65bcff"
   },
+  OilDir = {
+    bold = true,
+    fg = "#7aa2f7"
+  },
+  OilLink = {
+    fg = "#c099ff"
+  },
+  OilLinkTarget = {
+    fg = "#c099ff"
+  },
   Operator = {
     fg = "#89ddff"
   },
@@ -2335,7 +2363,7 @@ local highlights = {
     fg = "#ffc777"
   },
   Search = {
-    bg = "#3e68d7",
+    bg = "#ff66b0",
     fg = "#c8d3f5"
   },
   SignColumn = {
@@ -2477,7 +2505,7 @@ local highlights = {
     fg = "#828bb8"
   },
   Type = {
-    fg = "#65bcff"
+    fg = "#94b0a6"
   },
   Underlined = {
     underline = true

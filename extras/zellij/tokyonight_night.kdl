@@ -4,17 +4,17 @@
 
 themes {
     tokyonight_night {
-        fg "#c0caf5"
-        bg "#292e42"
-        black "#15161e"
-        red "#f7768e"
-        green "#9ece6a"
-        yellow "#e0af68"
-        blue "#7aa2f7"
-        magenta "#bb9af7"
-        cyan "#7dcfff"
-        white "#a9b1d6"
-        orange "#ff9e64"
+        fg "#d4d4d4"
+        bg "#212121"
+        black "#131313"
+        red "#ffcf5b"
+        green "#7abf47"
+        yellow "#ffcf5b"
+        blue "#949cb1"
+        magenta "#ffcf5b"
+        cyan "#d4d4d4"
+        white "#969696"
+        orange "#d4d4d4"
     }
 }
 
