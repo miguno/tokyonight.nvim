@@ -16,7 +16,7 @@ find_position = { fg = "#07879d", bg = "#162325", bold = true }
 marker_copied   = { fg = "#606060", bg = "#606060" }
 marker_cut      = { fg = "#765b00", bg = "#765b00" }
 marker_marked   = { fg = "#765b00", bg = "#765b00" }
-marker_selected = { fg = "#7a839b", bg = "#7a839b" }
+marker_selected = { fg = "#606060", bg = "#606060" }
 
 # Tab
 tab_active   = { fg = "#606060", bg = "#dbdbdb" }
@@ -37,7 +37,7 @@ separator_close = ""
 separator_style = { fg = "#c2c2c2", bg = "#c2c2c2" }
 
 # Mode
-mode_normal = { fg = "#ececec", bg = "#7a839b", bold = true }
+mode_normal = { fg = "#ececec", bg = "#606060", bold = true }
 mode_select = { fg = "#ececec", bg = "#765b00", bold = true }
 mode_unset  = { fg = "#ececec", bg = "#765b00", bold = true }
 
@@ -47,7 +47,7 @@ progress_normal = { fg = "#e7e7e7" }
 progress_error  = { fg = "#765b00" }
 
 # Permissions
-permissions_t = { fg = "#7a839b" }
+permissions_t = { fg = "#606060" }
 permissions_r = { fg = "#765b00" }
 permissions_w = { fg = "#765b00" }
 permissions_x = { fg = "#53852f" }
@@ -82,7 +82,7 @@ hovered = { fg = "#606060", bg="#d1cbc4" }
 cols = 3
 mask            = { bg = "#ececec" }
 cand            = { fg = "#606060" }
-rest            = { fg = "#7a839b" }
+rest            = { fg = "#606060" }
 desc            = { fg = "#765b00" }
 separator       = "  "
 separator_style = { fg = "#836437" }
@@ -124,6 +124,6 @@ rules = [
 	{ name = "*", is = "exec"  , fg = "#53852f" },
 
 	# Fallback
-	{ name = "*/", fg = "#7a839b" }
+	{ name = "*/", fg = "#606060" }
 ]
     

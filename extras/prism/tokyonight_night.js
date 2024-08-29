@@ -13,7 +13,7 @@ module.exports =  {
     {
       types: ["function"],
       style: {
-        color: "#949cb1",
+        color: "#d4d4d4",
       },
     },
     {

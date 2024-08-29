@@ -15,11 +15,11 @@ constructor = { fg = "#94b0a6" }
 "diagnostic.info" = { underline = { style = "curl" } }
 "diagnostic.warning" = { underline = { style = "curl" } }
 "diff.delta" = { fg = "#ffcf5b" }
-"diff.delta.moved" = { fg = "#949cb1" }
+"diff.delta.moved" = { fg = "#d4d4d4" }
 "diff.minus" = { fg = "#e46565" }
 "diff.plus" = { fg = "#82d458" }
 error = { fg = "#f15050" }
-function = { fg = "#949cb1" }
+function = { fg = "#d4d4d4" }
 "function.builtin" = { fg = "#949cb1" }
 "function.macro" = { fg = "#41a6b5" }
 "function.method" = 
@@ -35,13 +35,13 @@ keyword = { fg = "#ffcf5b", modifiers = ["italic"] }
 "keyword.directive" = { fg = "#d4d4d4" }
 "keyword.function" = { fg = "#ffcf5b" }
 "keyword.operator" = { fg = "#ffcf5b" }
-label = { fg = "#949cb1" }
+label = { fg = "#d4d4d4" }
 "markup.bold" = { fg = "#d4d4d4", modifiers = ["bold"] }
 "markup.heading" = 
 "markup.heading.completion" = { bg = "#151515", fg = "#d4d4d4" }
 "markup.heading.hover" = { bg = "#2e2e2e" }
 "markup.italic" = { fg = "#d4d4d4", modifiers = ["italic"] }
-"markup.link" = { fg = "#949cb1", underline = { style = "line" } }
+"markup.link" = { fg = "#d4d4d4", underline = { style = "line" } }
 "markup.link.label" = { fg = "#fef0ca" }
 "markup.link.text" = { fg = "#fef0ca" }
 "markup.link.url" = { underline = { style = "line" } }
@@ -50,7 +50,7 @@ label = { fg = "#949cb1" }
 "markup.normal.hover" = { fg = "#969696" }
 "markup.raw" = { fg = "#fef0ca" }
 "markup.raw.block" = { fg = "#fef0ca" }
-"markup.raw.inline" = { bg = "#414868", fg = "#949cb1" }
+"markup.raw.inline" = { bg = "#414868", fg = "#d4d4d4" }
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
 namespace = 
 operator = { fg = "#d4d4d4" }
@@ -99,7 +99,7 @@ bg_sidebar = "#151515"
 bg_statusline = "#151515"
 bg_visual = "#2e2c2a"
 black = "#131313"
-blue = "#949cb1"
+blue = "#d4d4d4"
 blue0 = "#504946"
 blue1 = "#949cb1"
 blue2 = "#0db9d7"
@@ -149,7 +149,7 @@ red = "#ffcf5b"
 red1 = "#f15050"
 teal = "#fef0ca"
 terminal_black = "#414868"
-todo = "#949cb1"
+todo = "#d4d4d4"
 warning = "#ffcf5b"
 yellow = "#ffcf5b"
 yellow1 = "#ffdd34"

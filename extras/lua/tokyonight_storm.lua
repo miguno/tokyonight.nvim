@@ -10,7 +10,7 @@ local colors = {
   bg_statusline = "#151515",
   bg_visual = "#2e2c2a",
   black = "#131313",
-  blue = "#949cb1",
+  blue = "#d4d4d4",
   blue0 = "#504946",
   blue1 = "#949cb1",
   blue2 = "#0db9d7",
@@ -69,7 +69,7 @@ local colors = {
   red1 = "#f15050",
   teal = "#fef0ca",
   terminal_black = "#414868",
-  todo = "#949cb1",
+  todo = "#d4d4d4",
   warning = "#ffcf5b",
   yellow = "#ffcf5b",
   yellow1 = "#ffdd34"
@@ -110,7 +110,7 @@ local highlights = {
     fg = "#fef0ca"
   },
   ["@comment.todo"] = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   ["@comment.warning"] = {
     fg = "#ffcf5b"
@@ -201,7 +201,7 @@ local highlights = {
     link = "StorageClass"
   },
   ["@label"] = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   ["@lsp.type.boolean"] = {
     link = "@boolean"
@@ -351,7 +351,7 @@ local highlights = {
   },
   ["@markup.heading.1.markdown"] = {
     bold = true,
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   ["@markup.heading.2.markdown"] = {
     bold = true,
@@ -399,7 +399,7 @@ local highlights = {
     fg = "#d4d4d4"
   },
   ["@markup.list.unchecked"] = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   ["@markup.math"] = {
     link = "Special"
@@ -409,7 +409,7 @@ local highlights = {
   },
   ["@markup.raw.markdown_inline"] = {
     bg = "#414868",
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   ["@markup.strikethrough"] = {
     strikethrough = true
@@ -473,7 +473,7 @@ local highlights = {
     link = "Delimiter"
   },
   ["@tag.delimiter.tsx"] = {
-    fg = "#6f7483"
+    fg = "#9c9c9c"
   },
   ["@tag.tsx"] = {
     fg = "#ffcf5b"
@@ -631,7 +631,7 @@ local highlights = {
     fg = "#949cb1"
   },
   AlphaHeader = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   AlphaHeaderLabel = {
     fg = "#d4d4d4"
@@ -1007,7 +1007,7 @@ local highlights = {
     fg = "#949cb1"
   },
   DashboardHeader = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   DashboardIcon = {
     bold = true,
@@ -1029,7 +1029,7 @@ local highlights = {
     fg = "#ffcf5b"
   },
   DefinitionIcon = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   Delimiter = {
     link = "Special"
@@ -1100,7 +1100,7 @@ local highlights = {
     bg = "#644d0e"
   },
   Directory = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   EndOfBuffer = {
     fg = "#181818"
@@ -1112,7 +1112,7 @@ local highlights = {
     fg = "#f15050"
   },
   FernBranchText = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   FlashBackdrop = {
     fg = "#545c7e"
@@ -1136,14 +1136,14 @@ local highlights = {
   },
   Folded = {
     bg = "#343434",
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   Foo = {
     bg = "#5c5542",
     fg = "#d4d4d4"
   },
   Function = {
-    fg = "#949cb1",
+    fg = "#d4d4d4",
     style = {}
   },
   FzfLuaBorder = {
@@ -1230,7 +1230,7 @@ local highlights = {
     fg = "#ffcf5b"
   },
   GlyphPalette4 = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   GlyphPalette6 = {
     fg = "#d4d4d4"
@@ -1245,7 +1245,7 @@ local highlights = {
     link = "Headline1"
   },
   Headline1 = {
-    bg = "#1e1f20"
+    bg = "#212121"
   },
   Headline2 = {
     bg = "#24211b"
@@ -1541,7 +1541,7 @@ local highlights = {
     fg = "#d4d4d4"
   },
   LspSagaCodeActionBorder = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   LspSagaCodeActionContent = {
     fg = "#ffcf5b"
@@ -1556,7 +1556,7 @@ local highlights = {
     fg = "#2e2c2a"
   },
   LspSagaHoverBorder = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   LspSagaRenameBorder = {
     fg = "#7abf47"
@@ -1617,7 +1617,7 @@ local highlights = {
     italic = true
   },
   MiniStarterHeader = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   MiniStarterInactive = {
     fg = "#a47e47",
@@ -1655,7 +1655,7 @@ local highlights = {
   },
   MiniStatuslineInactive = {
     bg = "#151515",
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   MiniStatuslineModeCommand = {
     bg = "#ffcf5b",
@@ -1668,7 +1668,7 @@ local highlights = {
     fg = "#131313"
   },
   MiniStatuslineModeNormal = {
-    bg = "#949cb1",
+    bg = "#d4d4d4",
     bold = true,
     fg = "#131313"
   },
@@ -1741,7 +1741,7 @@ local highlights = {
     fg = "#969696"
   },
   MoreMsg = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   MsgArea = {
     fg = "#969696"
@@ -1900,7 +1900,7 @@ local highlights = {
   },
   NeogitHunkHeaderHighlight = {
     bg = "#343434",
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   NeogitRemote = {
     fg = "#ffcf5b"
@@ -1910,10 +1910,10 @@ local highlights = {
     fg = "#ffcf5b"
   },
   NeotestBorder = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   NeotestDir = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   NeotestExpandMarker = {
     fg = "#969696"
@@ -1931,7 +1931,7 @@ local highlights = {
     fg = "#969696"
   },
   NeotestMarked = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   NeotestNamespace = {
     fg = "#41a6b5"
@@ -1943,16 +1943,16 @@ local highlights = {
     fg = "#ffcf5b"
   },
   NeotestSkipped = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   NeotestTarget = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   NeotestTest = {
     fg = "#969696"
   },
   NeotestWinSelect = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   NoiceCmdlineIconInput = {
     fg = "#ffcf5b"
@@ -2173,7 +2173,7 @@ local highlights = {
   },
   NvimTreeFolderIcon = {
     bg = "NONE",
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   NvimTreeGitDeleted = {
     fg = "#e46565"
@@ -2203,14 +2203,14 @@ local highlights = {
   },
   NvimTreeRootFolder = {
     bold = true,
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   NvimTreeSpecialFile = {
     fg = "#ffcf5b",
     underline = true
   },
   NvimTreeSymlink = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   NvimTreeWinSeparator = {
     bg = "#151515",
@@ -2280,14 +2280,14 @@ local highlights = {
     fg = "#d4d4d4"
   },
   Question = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   QuickFixLine = {
     bg = "#2e2c2a",
     bold = true
   },
   RainbowDelimiterBlue = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   RainbowDelimiterCyan = {
     fg = "#d4d4d4"
@@ -2311,7 +2311,7 @@ local highlights = {
     fg = "#ffcf5b"
   },
   ReferencesIcon = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   ScrollbarError = {
     bg = "NONE",
@@ -2432,7 +2432,7 @@ local highlights = {
     fg = "#545c7e"
   },
   TSRainbowBlue = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   TSRainbowCyan = {
     fg = "#d4d4d4"
@@ -2460,7 +2460,7 @@ local highlights = {
     bg = "#131313"
   },
   TabLineSel = {
-    bg = "#949cb1",
+    bg = "#d4d4d4",
     fg = "#131313"
   },
   TargetWord = {
@@ -2487,7 +2487,7 @@ local highlights = {
   },
   Title = {
     bold = true,
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   Todo = {
     bg = "#ffcf5b",
@@ -2535,7 +2535,7 @@ local highlights = {
     bg = "#151515"
   },
   WhichKeyGroup = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   WhichKeySeparator = {
     fg = "#a47e47"
@@ -2582,7 +2582,7 @@ local highlights = {
     fg = "#ffcf5b"
   },
   diffFile = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   diffIndexLine = {
     fg = "#ffcf5b"
@@ -2613,7 +2613,7 @@ local highlights = {
   },
   helpCommand = {
     bg = "#414868",
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   htmlH1 = {
     bold = true,
@@ -2621,7 +2621,7 @@ local highlights = {
   },
   htmlH2 = {
     bold = true,
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   illuminatedCurWord = {
     bg = "#343434"
@@ -2645,14 +2645,14 @@ local highlights = {
   },
   markdownH2 = {
     bold = true,
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   markdownHeadingDelimiter = {
     bold = true,
     fg = "#d4d4d4"
   },
   markdownLinkText = {
-    fg = "#949cb1",
+    fg = "#d4d4d4",
     underline = true
   },
   mkdCodeDelimiter = {
@@ -2668,7 +2668,7 @@ local highlights = {
     fg = "#fef0ca"
   },
   qfFileName = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   qfLineNr = {
     fg = "#d4d4d4"
@@ -2686,7 +2686,7 @@ local highlights = {
     fg = "#fef0ca"
   },
   rainbowcol5 = {
-    fg = "#949cb1"
+    fg = "#d4d4d4"
   },
   rainbowcol6 = {
     fg = "#ffcf5b"
