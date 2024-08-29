@@ -52,7 +52,7 @@ local colors = {
     change = "#485a86",
     delete = "#b55a67"
   },
-  gray = "#e5e5e5",
+  gray = "#4d8d97",
   green = "#c3e88d",
   green1 = "#4fd6be",
   green2 = "#41a6b5",
@@ -1023,7 +1023,7 @@ local highlights = {
     fg = "#ff966c"
   },
   Define = {
-    fg = "#e5e5e5"
+    fg = "#4d8d97"
   },
   DefinitionCount = {
     fg = "#fca7ea"
@@ -1303,6 +1303,9 @@ local highlights = {
   IncSearch = {
     bg = "#ff007c",
     fg = "#1b1d2b"
+  },
+  Include = {
+    fg = "#4d8d97"
   },
   IndentBlanklineChar = {
     fg = "#3b4261",
