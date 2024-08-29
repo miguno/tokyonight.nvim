@@ -64,7 +64,7 @@ M.default = {
     change = "#ffcf5b",
     delete = "#e46565",
   },
-  gray = "#a0a6a4",
+  gray = "#4d8d97",
   -- C: Strings and names of includes like <foo.h>.
   -- Rust: Strings.
   -- Default: "#9ece6a"
