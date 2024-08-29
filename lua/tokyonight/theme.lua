@@ -121,7 +121,7 @@ function M.setup()
     -- Exception     = { }, --  try, catch, throw
 
     PreProc = { fg = c.cyan }, -- (preferred) generic Preprocessor
-    -- Include       = { }, --  preprocessor #include
+    Include = { fg = c.gray }, --  preprocessor #include
     Define = { fg = c.gray }, -- preprocessor #define
     Macro = { fg = c.green2 }, -- same as Define
     -- PreCondit     = { }, --  preprocessor #if, #else, #endif, etc.
