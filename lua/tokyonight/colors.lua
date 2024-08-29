@@ -11,7 +11,7 @@ M.default = {
   bg = "#181818", -- When changing, also update M.night settings below.
   bg_dark = "#151515", -- When changing, also update M.night settings below.
   bg_highlight = "#212121",
-  blue = "#949cb1",
+  blue = "#d4d4d4",
   -- Neovim: Currently active/selected function or identifier in tagbar.
   --         Background color (cf. `c.bg_visual` here and in theme.lua) of
   --         visual selection.
