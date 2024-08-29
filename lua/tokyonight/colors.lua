@@ -43,7 +43,7 @@ M.default = {
   -- Neovim: Arrows `=>` in which-key menu.
   -- Default: "#565f89"
   dark5 = "#d4d4d4",
-  -- C: Function definitions.
+  -- C: Variable/symbol names.
   -- Rust: Function names and functions calls.
   -- Neovim: Bottom bar background and foreground depending on item.
   -- Default: "#7aa2f7"
