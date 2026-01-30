@@ -8,8 +8,8 @@ local M = {}
 ---@class Palette
 M.default = {
   none = "NONE",
-  bg = "#181818", -- When changing, also update M.night settings below.
-  bg_dark = "#151515", -- When changing, also update M.night settings below.
+  bg = "#080808", -- When changing, also update M.night settings below.
+  bg_dark = "#010101", -- When changing, also update M.night settings below.
   bg_highlight = "#212121",
   blue = "#d4d4d4",
   -- Neovim: Currently active/selected function or identifier in tagbar.
@@ -109,8 +109,8 @@ M.default = {
 }
 
 M.night = {
-  bg = "#181818",
-  bg_dark = "#151515",
+  bg = "#080808",
+  bg_dark = "#010101",
 }
 M.day = M.night
 
